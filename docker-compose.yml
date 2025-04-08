@@ -1,0 +1,15 @@
+services:
+
+  postgres:
+    image: postgres:16.3
+    container_name: travel_prediction
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: prediction
+    ports:
+      - "7000:5432"
+    volumes:
+      - ./volume/postgres-data:/var/lib/postgresql/data
+
+

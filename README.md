@@ -29,4 +29,4 @@ Um sistema completo para prever o propósito de viagem com base em dados de entr
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/AndersonVelos0/travel-prediction-app.git
+   [git clone https://github.com/AndersonVelos0/travel-prediction-app.git](https://github.com/AndersonVelos0/travel-prediction-app.git)

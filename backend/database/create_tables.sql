@@ -1,0 +1,23 @@
+CREATE TABLE predictions (
+    id SERIAL PRIMARY KEY,
+    created TIMESTAMP,
+    cancel_time TIMESTAMP,
+    departure_time TIMESTAMP,
+    bill_id VARCHAR,
+    ticket_id VARCHAR UNIQUE NOT NULL,
+    reserve_status VARCHAR,
+    user_id VARCHAR,
+    male BOOLEAN,
+    price FLOAT,
+    coupon_discount FLOAT,
+    origin VARCHAR,
+    destination VARCHAR,
+    domestic BOOLEAN,
+    vehicle_type VARCHAR,
+    vehicle_class BOOLEAN,
+    vehicle VARCHAR,
+    cancel BOOLEAN,
+    trip_reason VARCHAR,
+    predicao INT,
+    prediction_date TIMESTAMP
+);

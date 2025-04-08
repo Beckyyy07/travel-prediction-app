@@ -30,3 +30,12 @@ Um sistema completo para prever o propósito de viagem com base em dados de entr
 1. Clone o repositório:
    ```bash
    [git clone https://github.com/AndersonVelos0/travel-prediction-app.git](https://github.com/AndersonVelos0/travel-prediction-app.git)
+
+
+## Como Executar
+
+1. Configure o banco de dados PostgreSQL.
+2. Treine o modelo utilizando o script `backend/models/train_model.py`.
+3. Inicie o servidor FastAPI com:
+   ```bash
+   uvicorn backend.main:app --reload

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #f9f9f9;
+            max-width: 600px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Previsão de Propósito de Viagem</h1>
+    <form action="http://127.0.0.1:8000/prever" method="POST">
+        <!-- Campo 'Created' -->
+        <label for="created">Data de Criação:</label>
+        <input type="datetime-local" id="created" name="created" required>
+
+        <!-- Campo 'CancelTime' -->
+        <label for="cancel_time">Data de Cancelamento (se aplicável):</label>
+        <input type="datetime-local" id="cancel_time" name="cancel_time">
+
+        <!-- Campo 'DepartureTime' -->
+        <label for="departure_time">Data e Hora de Partida:</label>
+        <input type="datetime-local" id="departure_time" name="departure_time" required>
+
+        <!-- Campo 'BillID' -->
+        <label for="bill_id">ID da Compra:</label>
+        <input type="text" id="bill_id" name="bill_id" required>
+
+        <!-- Campo 'TicketID' -->
+        <label for="ticket_id">ID do Ticket:</label>
+        <input type="text" id="ticket_id" name="ticket_id" required>
+
+        <!-- Campo 'ReserveStatus' -->
+        <label for="reserve_status">Status da Reserva:</label>
+        <select id="reserve_status" name="reserve_status" required>
+            <option value="Pago">Pago</option>
+            <option value="Pendente">Pendente</option>
+            <option value="Cancelado">Cancelado</option>
+        </select>
+
+        <!-- Campo 'UserID' -->
+        <label for="user_id">ID do Usuário:</label>
+        <input type="text" id="user_id" name="user_id" required>
+
+        <!-- Campo 'Male' -->
+        <label for="male">Gênero (Masculino):</label>
+        <select id="male" name="male" required>
+            <option value="true">Sim</option>
+            <option value="false">Não</option>
+        </select>
+
+        <!-- Campo 'Price' -->
+        <label for="price">Preço do Ticket:</label>
+        <input type="number" id="price" name="price" step="0.01" required>
+
+        <!-- Campo 'CouponDiscount' -->
+        <label for="coupon_discount">Desconto Aplicado:</label>
+        <input type="number" id="coupon_discount" name="coupon_discount" step="0.01" required>
+
+        <!-- Campo 'Origin' -->
+        <label for="origin">Origem:</label>
+        <input type="text" id="origin" name="origin" required>
+
+        <!-- Campo 'Destination' -->
+        <label for="destination">Destino:</label>
+        <input type="text" id="destination" name="destination" required>
+
+        <!-- Campo 'Domestic' -->
+        <label for="domestic">Viagem Doméstica:</label>
+        <select id="domestic" name="domestic" required>
+            <option value="true">Sim</option>
+            <option value="false">Não</option>
+        </select>
+
+        <!-- Campo 'VehicleType' -->
+        <label for="vehicle_type">Tipo de Transporte:</label>
+        <input type="text" id="vehicle_type" name="vehicle_type" required>
+
+        <!-- Campo 'VehicleClass' -->
+        <label for="vehicle_class">Classe do Veículo (Primeira Classe):</label>
+        <select id="vehicle_class" name="vehicle_class" required>
+            <option value="true">Sim</option>
+            <option value="false">Não</option>
+        </select>
+
+        <!-- Campo 'Vehicle' -->
+        <label for="vehicle">Nome/Modelo do Veículo:</label>
+        <input type="text" id="vehicle" name="vehicle" required>
+
+        <!-- Campo 'Cancel' -->
+        <label for="cancel">Cancelado:</label>
+        <select id="cancel" name="cancel" required>
+            <option value="true">Sim</option>
+            <option value="false">Não</option>
+        </select>
+
+        <!-- Campo 'TripReason' -->
+        <label for="trip_reason">Motivo da Viagem:</label>
+        <input type="text" id="trip_reason" name="trip_reason">
+
+        <!-- Botão de envio -->
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
